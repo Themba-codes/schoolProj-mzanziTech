@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.contractorNameTxtBox = new System.Windows.Forms.TextBox();
-            this.horsTxtBox = new System.Windows.Forms.TextBox();
+            this.hoursTxtBox = new System.Windows.Forms.TextBox();
             this.numDependentsTxtBox = new System.Windows.Forms.TextBox();
             this.calcNetPayBtn = new System.Windows.Forms.Button();
             this.resetBtn = new System.Windows.Forms.Button();
@@ -103,13 +103,14 @@
             this.contractorNameTxtBox.Size = new System.Drawing.Size(222, 22);
             this.contractorNameTxtBox.TabIndex = 4;
             // 
-            // horsTxtBox
+            // hoursTxtBox
             // 
-            this.horsTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horsTxtBox.Location = new System.Drawing.Point(203, 194);
-            this.horsTxtBox.Name = "horsTxtBox";
-            this.horsTxtBox.Size = new System.Drawing.Size(222, 22);
-            this.horsTxtBox.TabIndex = 5;
+            this.hoursTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hoursTxtBox.Location = new System.Drawing.Point(203, 194);
+            this.hoursTxtBox.Name = "hoursTxtBox";
+            this.hoursTxtBox.Size = new System.Drawing.Size(222, 22);
+            this.hoursTxtBox.TabIndex = 5;
+            this.hoursTxtBox.TextChanged += new System.EventHandler(this.hoursTxtBox_TextChanged);
             // 
             // numDependentsTxtBox
             // 
@@ -118,6 +119,7 @@
             this.numDependentsTxtBox.Name = "numDependentsTxtBox";
             this.numDependentsTxtBox.Size = new System.Drawing.Size(222, 22);
             this.numDependentsTxtBox.TabIndex = 6;
+            this.numDependentsTxtBox.TextChanged += new System.EventHandler(this.numDependentsTxtBox_TextChanged);
             // 
             // calcNetPayBtn
             // 
@@ -129,6 +131,7 @@
             this.calcNetPayBtn.TabIndex = 7;
             this.calcNetPayBtn.Text = "Calculate Net Pay";
             this.calcNetPayBtn.UseVisualStyleBackColor = true;
+            this.calcNetPayBtn.Click += new System.EventHandler(this.calcNetPayBtn_Click);
             // 
             // resetBtn
             // 
@@ -292,7 +295,7 @@
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.calcNetPayBtn);
             this.Controls.Add(this.numDependentsTxtBox);
-            this.Controls.Add(this.horsTxtBox);
+            this.Controls.Add(this.hoursTxtBox);
             this.Controls.Add(this.contractorNameTxtBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -316,7 +319,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox contractorNameTxtBox;
-        private System.Windows.Forms.TextBox horsTxtBox;
+        private System.Windows.Forms.TextBox hoursTxtBox;
         private System.Windows.Forms.TextBox numDependentsTxtBox;
         private System.Windows.Forms.Button calcNetPayBtn;
         private System.Windows.Forms.Button resetBtn;
